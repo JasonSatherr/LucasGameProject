@@ -6,6 +6,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include "EventHandler.h"
+#include "Initializer.h"
 /*
 *	Class that acts as the game engine
 */
@@ -17,7 +18,9 @@ private:
 	sf::RenderWindow *window;
 	sf::Event event;
 	sf::VideoMode videoMode;
-	
+	sf::Music music;
+	sf::Font font;
+	sf::Text text;
 	//Event Handler for updates
 	EventHandler eventHandler;
 

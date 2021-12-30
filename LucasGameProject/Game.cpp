@@ -32,7 +32,9 @@ Game::Game()
 		Initializes the variables and windows of the Game Class	
 	*/
 	this->initVars();
-	this->initWindow();
+	/*this->initWindow();*/
+	start::initAll(&(this->videoMode), &(this->window), &(this->music),
+		&(this->font), &(this->text));
 }
 
 
@@ -63,17 +65,9 @@ void Game::update()
 		- A new level 
 		- etc.
 	*/
-	//I guess this is where we listen of the events, and then act upon that
 
-	//while (this->window->pollEvent(this->event))
-	//{
-	//	// "close requested" event: we close the window
-	//	if (this->event.type == sf::Event::Closed)
-	//		this->window->close();
-	//}
-	//^^ move this to a event handler...
 	this->eventHandler.update(this->window);
-	//^^Done!!
+
 }
 
 void Game::render()
