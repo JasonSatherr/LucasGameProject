@@ -7,6 +7,7 @@
 #include <SFML/Network.hpp>
 #include "EventHandler.h"
 #include "Initializer.h"
+#include "Player.h"
 /*
 *	Class that acts as the game engine
 */
@@ -26,6 +27,9 @@ private:
 
 	//Music player
 	sf::Music musicPlayer;
+
+	//The player
+	Player player;
 
 	//PRIVATE FUNCTIONS
 	//Init functions
