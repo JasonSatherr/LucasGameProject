@@ -1,2 +1,56 @@
 #include "Player.h"
 
+void Player::playerInit()
+{
+	this->size.x = 50.0f;
+	this->size.y = 50.0f;
+	this->bodyColor = sf::Color::Red;
+	this->position = sf::Vector2f(0.0f, 0.0f);
+	this->body.setSize(this->size);
+	this->body.setFillColor(this->bodyColor);
+	this->body.setPosition(this->position);
+}
+
+void Player::move(float x, float y)
+{
+	this->position.x = this->position.x + x;
+	this->position.y = this->position.y + y;
+	this->body.setPosition(this->position);
+}
+
+Player::Player()
+{
+	this->playerInit();
+	
+}
+
+Player::~Player()
+{
+
+
+}
+
+void Player::draw(sf::RenderWindow * window)
+{
+	
+	window->draw(this->body);
+
+}
+
+void Player::updatePlayer()
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		this->move(-1.0f, 0.0f);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	{
+		this->move(1.0f, 0.0f);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+	{
+		// quit...
+	}
+
+
+}

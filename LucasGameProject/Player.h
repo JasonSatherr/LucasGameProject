@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 /**
 *	Class to define player behavior
 *	
@@ -10,6 +11,14 @@
 class Player
 {
 private:
+	//Setup default characteristics
+	void playerInit();
+
+	//Player appearance
+	sf::RectangleShape body;
+	sf::Color bodyColor;
+	sf::Vector2f size;
+	sf::Vector2f position;
 	
 	//State properties
 	bool isOnFloor;
@@ -17,11 +26,25 @@ private:
 
 	//Actions
 	//void shoot();
-	//void move(float x, float y);
+	void move(float x, float y);
 	//void jump();
+	//void onHit();
 	
 
 public:
 
+	Player();
+	virtual ~Player();
+
+	void draw(sf::RenderWindow* window);
+	void updatePlayer();
+
+
 };
+
+
+
+
+
+
 
