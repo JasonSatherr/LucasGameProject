@@ -9,6 +9,8 @@ private:
 	//Setup default characteristics
 	void characterInit();
 
+	//State memory
+	bool isMovingRight;
 
 public:
 

@@ -8,6 +8,7 @@
 #include "EventHandler.h"
 #include "Initializer.h"
 #include "Player.h"
+#include "Enemy.h"
 /*
 *	Class that acts as the game engine
 */
@@ -30,6 +31,8 @@ private:
 
 	//The player
 	Player player;
+	//The enemy(s)
+	Enemy enemy;
 
 	//PRIVATE FUNCTIONS
 	//Init functions

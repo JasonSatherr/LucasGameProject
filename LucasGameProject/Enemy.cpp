@@ -4,8 +4,8 @@ void Enemy::characterInit()
 {
 	//this->size.x = 50.0f;
 	//this->size.y = 50.0f;
-	this->bodyColor = sf::Color::Yellow;
-	this->position = sf::Vector2f(0.0f, 0.0f);
+	this->bodyColor = sf::Color::Magenta;
+	this->position = sf::Vector2f(300.0f, 300.0f);
 	//this->body.setSize(this->size);
 	this->body.setFillColor(this->bodyColor);
 	this->body.setPosition(this->position);
@@ -39,18 +39,20 @@ void Enemy::draw(sf::RenderWindow* window)
 
 void Enemy::updateCharacter()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	{
-		this->move(-1.0f, 0.0f);
+	//For now let's just have the little one move side to side...
+	if (this->position.x <= 600.0f && this->isMovingRight) {
+		this->move(2.0f, 0.0f);
+		this->isMovingRight = true;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	{
-		this->move(1.0f, 0.0f);
+	else if (this->position.x >= 300.0f) {
+		this->move(-2.0f, 0.0f);
+		this->isMovingRight = false;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-	{
-		// quit...
+	else {
+		this->isMovingRight = true;
 	}
 
+	//We might later benefit from defining enemies by their movement types later.
+	//Additionally, do we handle things such as 'on hit' here?
 
 }
