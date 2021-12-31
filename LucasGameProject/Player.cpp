@@ -2,11 +2,11 @@
 
 void Player::characterInit()
 {
-	this->size.x = 50.0f;
-	this->size.y = 50.0f;
-	this->bodyColor = sf::Color::Red;
+	//this->size.x = 50.0f;
+	//this->size.y = 50.0f;
+	this->bodyColor = sf::Color::Yellow;
 	this->position = sf::Vector2f(0.0f, 0.0f);
-	this->body.setSize(this->size);
+	//this->body.setSize(this->size);
 	this->body.setFillColor(this->bodyColor);
 	this->body.setPosition(this->position);
 }

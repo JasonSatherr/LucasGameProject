@@ -14,18 +14,6 @@ class Player : public Character
 private:
 	//Setup default characteristics
 	void characterInit();
-
-	//Player appearance
-
-	
-	//State properties
-
-
-	//Actions
-	//void shoot();
-
-	//void jump();
-	//void onHit();
 	
 
 public:
