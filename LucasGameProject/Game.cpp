@@ -68,6 +68,7 @@ void Game::update()
 
 	this->eventHandler.update(this->window);
 	this->player.updateCharacter();
+	this->enemy.updateCharacter();
 }
 
 void Game::render()
@@ -81,6 +82,7 @@ void Game::render()
 	//I guess this is where we draw to the window...
 	this->window->clear(sf::Color::Black);
 	player.draw(window);
+	enemy.draw(window);
 	// draw everything here...
 	// window.draw(...);
 	// end the current frame
