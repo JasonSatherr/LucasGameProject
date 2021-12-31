@@ -10,3 +10,7 @@ Thus, I need some way to enjoy the mechanics of the character without making oth
 ---
 
 For now, just clone this all into a 2019 Visual Studio, build and run!
+---
+
+## Have fun! 
+![Picture of Lucas](SSBUWebsiteLucas1.jpg)
