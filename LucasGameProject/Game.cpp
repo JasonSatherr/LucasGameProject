@@ -67,7 +67,7 @@ void Game::update()
 	*/
 
 	this->eventHandler.update(this->window);
-	this->player.updatePlayer();
+	this->player.updateCharacter();
 }
 
 void Game::render()
