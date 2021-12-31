@@ -41,11 +41,11 @@ void Player::updateCharacter()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
-		this->move(-1.0f, 0.0f);
+		this->move(-10.0f, 0.0f);
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
-		this->move(1.0f, 0.0f);
+		this->move(10.0f, 0.0f);
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 	{
