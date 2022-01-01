@@ -1,14 +1,23 @@
 #include "TimeElapsedComponent.h"
-
+//#include "string"
 void TimeElapsedComponent::updateSecondsElapsed()
 {
+	/*
+	*	@returns void
+	*	Updates the seconds elapsed parameter using the clock passed to the class on
+	*	initialization.
+	*/
 	this->secondsElapsed = this->clock->getElapsedTime().asSeconds();
 }
 
 
 
-TimeElapsedComponent::TimeElapsedComponent(sf::Text *text, sf::Clock* clock) : UIComponent(text)
+TimeElapsedComponent::TimeElapsedComponent(sf::Font * font, sf::Clock* clock) : UIComponent(font, 20.0f, 10.0f)
 {
+	/*
+	*	Constructor for the TimeElapsedComponent class.
+	*	Will call parent constructors to set the text
+	*/
 	this->clock = clock;
 	updateSecondsElapsed();
 }
@@ -19,9 +28,15 @@ TimeElapsedComponent::~TimeElapsedComponent()
 
 void TimeElapsedComponent::update()
 {
+	/*
+	*	@returns void
+	*	This function will update all necessary variables for the component to work as intended
+	*/
 	this->updateSecondsElapsed();
+	this->text.setString(std::to_string((this->secondsElapsed)));
 }
 
-void TimeElapsedComponent::draw()
+void TimeElapsedComponent::draw(sf::RenderWindow* window)
 {
+	window->draw(this->text);
 }

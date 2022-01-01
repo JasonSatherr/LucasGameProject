@@ -10,9 +10,9 @@ private:
 
 public:
 	
-	TimeElapsedComponent(sf::Text *text, sf::Clock* clock);
+	TimeElapsedComponent(sf::Font * font, sf::Clock* clock);
 	virtual ~TimeElapsedComponent();
 	void update();
-	void draw();
+	void draw(sf::RenderWindow* window);
 };
 
