@@ -8,7 +8,7 @@
 namespace start
 {
 	//Creates the window
-	void initWindow(sf::VideoMode* videoMode, sf::Window** window);
+	void initWindow(sf::VideoMode* videoMode, sf::RenderWindow** window);
 	//Starts the music
 	void initMusic(sf::Music * musicPlayer);
 	//Loads a Font
