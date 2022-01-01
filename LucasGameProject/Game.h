@@ -9,6 +9,7 @@
 #include "Initializer.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "TimeElapsedComponent.h"
 /*
 *	Class that acts as the game engine
 */
@@ -23,6 +24,8 @@ private:
 	sf::Music music;
 	sf::Font font;
 	sf::Text text;
+
+	sf::Clock clock;
 	//Event Handler for updates
 	EventHandler eventHandler;
 
@@ -33,6 +36,9 @@ private:
 	Player player;
 	//The enemy(s)
 	Enemy enemy;
+
+	//UI objects
+	UIComponent* timeUI;
 
 	//PRIVATE FUNCTIONS
 	//Init functions

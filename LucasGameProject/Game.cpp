@@ -11,20 +11,11 @@ void Game::initVars()
 	* 
 	*/
 	this->window = nullptr;
+	this->timeUI = nullptr;
+	
 }
 
-void Game::initWindow()
-{
-	/**
-		@return void
 
-		Customizes and creates the window
-	*/
-	this->videoMode.width = 800;
-	this->videoMode.height = 600;
-	this->window = new sf::RenderWindow(this->videoMode, "Lucas Game");
-	this->window->setFramerateLimit(30);
-}
 
 Game::Game()
 {
@@ -32,9 +23,9 @@ Game::Game()
 		Initializes the variables and windows of the Game Class	
 	*/
 	this->initVars();
-	/*this->initWindow();*/
 	start::initAll(&(this->videoMode), &(this->window), &(this->music),
 		&(this->font), &(this->text));
+	this->timeUI = new TimeElapsedComponent(&(this->font), &(this->clock));
 }
 
 
@@ -48,6 +39,7 @@ Game::~Game()
 	*/
 
 	delete this->window;
+	delete this->timeUI;
 }
 
 
@@ -69,6 +61,7 @@ void Game::update()
 	this->eventHandler.update(this->window);
 	this->player.updateCharacter();
 	this->enemy.updateCharacter();
+	this->timeUI->update();
 }
 
 void Game::render()
@@ -83,6 +76,7 @@ void Game::render()
 	this->window->clear(sf::Color::Black);
 	player.draw(window);
 	enemy.draw(window);
+	this->timeUI->draw(window);
 	// draw everything here...
 	// window.draw(...);
 	// end the current frame
