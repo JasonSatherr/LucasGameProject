@@ -10,6 +10,7 @@ void TimeElapsedComponent::updateSecondsElapsed()
 TimeElapsedComponent::TimeElapsedComponent(sf::Text *text, sf::Clock* clock) : UIComponent(text)
 {
 	this->clock = clock;
+	updateSecondsElapsed();
 }
 
 TimeElapsedComponent::~TimeElapsedComponent()
