@@ -11,11 +11,36 @@ void Character::characterInit()
 	this->body.setPosition(this->position);
 }
 
+void Character::onCollision()
+{
+}
+
+void Character::shoot()
+{
+}
+
+void Character::die()
+{
+
+}
+
 void Character::move(float x, float y)
 {
 	this->position.x = this->position.x + x;
 	this->position.y = this->position.y + y;
 	this->body.setPosition(this->position);
+}
+
+void Character::jump()
+{
+}
+
+void Character::onHit()
+{
+	this->health--;
+	if (this->health == 0) {
+		this->die();
+	}
 }
 
 Character::Character()

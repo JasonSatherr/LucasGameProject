@@ -18,12 +18,16 @@ protected:
 	//State properties
 	bool isOnFloor;
 	sf::Color color;
+	int health = 3;
+	
+	void onCollision();
 
 	//Actions
-	//void shoot();
+	void shoot();
+	void die();
 	void move(float x, float y);
-	//void jump();
-	//void onHit();
+	void jump();
+	void onHit();
 
 
 public:
