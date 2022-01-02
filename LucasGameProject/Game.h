@@ -10,6 +10,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "TimeElapsedComponent.h"
+#include "TimeStep.h"
 /*
 *	Class that acts as the game engine
 */
@@ -24,8 +25,10 @@ private:
 	sf::Music music;
 	sf::Font font;
 	sf::Text text;
-
+	
+	//Handle the time step
 	sf::Clock clock;
+	TimeStep * timeStepper;
 	//Event Handler for updates
 	EventHandler eventHandler;
 
@@ -43,7 +46,6 @@ private:
 	//PRIVATE FUNCTIONS
 	//Init functions
 	void initVars();
-	void initWindow();
 
 public:
 

@@ -28,6 +28,9 @@
     <Filter Include="Source Files\UI\UIComponents">
       <UniqueIdentifier>{d472e711-4b52-448c-b017-7e6623eae35d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{2c91e79f-744a-428f-a887-9abac7b44fa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LucasGameProject.cpp">
@@ -54,14 +57,20 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UIComponent.cpp">
-      <Filter>Source Files\UI</Filter>
-    </ClCompile>
     <ClCompile Include="HUD.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
     <ClCompile Include="TimeElapsedComponent.cpp">
       <Filter>Source Files\UI\UIComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="UIComponent.cpp">
+      <Filter>Source Files\UI\UIComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementPhysics.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeStep.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +99,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TimeElapsedComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementPhysics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeStep.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

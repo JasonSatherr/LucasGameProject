@@ -152,9 +152,11 @@
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Initializer.cpp" />
     <ClCompile Include="LucasGameProject.cpp" />
+    <ClCompile Include="MovementPhysics.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="TimeElapsedComponent.cpp" />
+    <ClCompile Include="TimeStep.cpp" />
     <ClCompile Include="UIComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,8 +166,10 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="Initializer.h" />
+    <ClInclude Include="MovementPhysics.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="TimeElapsedComponent.h" />
+    <ClInclude Include="TimeStep.h" />
     <ClInclude Include="UIComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -26,6 +26,7 @@ Game::Game()
 	start::initAll(&(this->videoMode), &(this->window), &(this->music),
 		&(this->font), &(this->text));
 	this->timeUI = new TimeElapsedComponent(&(this->font), &(this->clock));
+	this->timeStepper = new TimeStep(&(this->clock));
 }
 
 
@@ -40,6 +41,7 @@ Game::~Game()
 
 	delete this->window;
 	delete this->timeUI;
+	delete this->timeStepper;
 }
 
 
@@ -62,6 +64,7 @@ void Game::update()
 	this->player.updateCharacter();
 	this->enemy.updateCharacter();
 	this->timeUI->update();
+	this->timeStepper->takeSteps();
 }
 
 void Game::render()
