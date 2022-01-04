@@ -15,6 +15,9 @@ private:
 	//Setup default characteristics
 	void characterInit();
 	
+	//update functions
+	void updateVelocity();  //<- At the moment, this is more like a default update velocity
+	//If nothing funky is happening with the state of the object
 
 public:
 
@@ -22,7 +25,7 @@ public:
 	virtual ~Player();
 
 	void draw(sf::RenderWindow* window);
-	void updateCharacter();
+	void update(double dt);
 
 
 };

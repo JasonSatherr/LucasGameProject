@@ -32,24 +32,44 @@ Player::~Player()
 
 void Player::draw(sf::RenderWindow * window)
 {
-	
+	//this->body.setPosition(this->position);	//Done in the update function
+	//For some reason...
 	window->draw(this->body);
 
 }
 
-void Player::updateCharacter()
+void Player::update(double dt)
+{
+	/*This function will update all necessary parameters of the player object every time step
+		@returns  void
+		@param dt The size of the time step
+		*/
+
+	//NOTE, THE CODE HERE IS THE SAME FOR THE ENEMY CLASS, SO PERHAPS WE MOVE
+	//THIS FUNCTION UP ONE INHERITANCE LEVEL?!
+	updateVelocity();
+	MovementPhysics::calcPhysics(this->position, this->velocity, this->acceleration, dt);
+	this->body.setPosition(this->position);
+}
+
+void Player::updateVelocity()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
-		this->move(-10.0f, 0.0f);
+		this->velocity.x = -1000.0f;
+		//this->move();
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
-		this->move(10.0f, 0.0f);
+		this->velocity.x = 1000.0f;
+		//this->move();
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 	{
 		// quit...
+	}
+	else {
+		this->velocity.x = 0.0f;
 	}
 
 
