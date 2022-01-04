@@ -158,6 +158,7 @@
     <ClCompile Include="TimeElapsedComponent.cpp" />
     <ClCompile Include="TimeStep.cpp" />
     <ClCompile Include="UIComponent.cpp" />
+    <ClCompile Include="Updatable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
@@ -171,6 +172,7 @@
     <ClInclude Include="TimeElapsedComponent.h" />
     <ClInclude Include="TimeStep.h" />
     <ClInclude Include="UIComponent.h" />
+    <ClInclude Include="Updatable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
