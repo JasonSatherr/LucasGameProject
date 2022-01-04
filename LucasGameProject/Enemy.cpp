@@ -37,7 +37,14 @@ void Enemy::draw(sf::RenderWindow* window)
 
 }
 
-void Enemy::updateCharacter()
+void Enemy::update(double dt)
+{
+	updateVelocity();
+	MovementPhysics::calcPhysics(this->position, this->velocity, this->acceleration, dt);
+	this->body.setPosition(this->position);
+}
+
+void Enemy::updateVelocity()
 {
 	//For now let's just have the little one move side to side...
 	if (this->position.x <= 600.0f && this->isMovingRight) {

@@ -6,6 +6,8 @@ void Character::characterInit()
 	this->size.y = 50.0f;
 	this->bodyColor = sf::Color::White;
 	this->position = sf::Vector2f(0.0f, 0.0f);
+	this->velocity = sf::Vector2f(0.0f, 0.0f);
+	this->acceleration = sf::Vector2f(0.0f, 0.0f);
 	this->body.setSize(this->size);
 	this->body.setFillColor(this->bodyColor);
 	this->body.setPosition(this->position);
@@ -31,6 +33,11 @@ void Character::move(float x, float y)
 	this->body.setPosition(this->position);
 }
 
+void Character::move()
+{
+	this->body.setPosition(this->position);
+}
+
 void Character::jump()
 {
 }
@@ -46,6 +53,7 @@ void Character::onHit()
 Character::Character()
 {
 	characterInit();
+	
 }
 
 Character::~Character()

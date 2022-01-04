@@ -12,13 +12,17 @@ private:
 	//State memory
 	bool isMovingRight;
 
+	//update functions
+	void updateVelocity();
+	
+
 public:
 
 	Enemy();
 	virtual ~Enemy();
 
 	void draw(sf::RenderWindow* window);
-	void updateCharacter();
+	void update(double dt);
 
 };
 
