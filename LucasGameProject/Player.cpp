@@ -2,21 +2,11 @@
 
 void Player::characterInit()
 {
-	//this->size.x = 50.0f;
-	//this->size.y = 50.0f;
 	this->bodyColor = sf::Color::Yellow;
 	this->position = sf::Vector2f(20.0f, 300.0f);
-	//this->body.setSize(this->size);
 	this->body.setFillColor(this->bodyColor);
 	this->body.setPosition(this->position);
 }
-
-//void Player::move(float x, float y)
-//{
-//	this->position.x = this->position.x + x;
-//	this->position.y = this->position.y + y;
-//	this->body.setPosition(this->position);
-//}
 
 Player::Player()
 {
@@ -57,12 +47,11 @@ void Player::updateVelocity()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
 		this->velocity.x = -1000.0f;
-		//this->move();
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
 		this->velocity.x = 1000.0f;
-		//this->move();
+
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 	{
