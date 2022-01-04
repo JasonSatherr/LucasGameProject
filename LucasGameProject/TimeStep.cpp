@@ -11,7 +11,7 @@ TimeStep::TimeStep(sf::Clock* clock)
 	this->reservoirOfTime = 0.0;
 }
 
-void TimeStep::takeSteps()
+void TimeStep::takeSteps(Player* p)
 {
 	double newTime = this->clock->getElapsedTime().asSeconds();
 	double frameTime = newTime - currentTime;
@@ -21,7 +21,9 @@ void TimeStep::takeSteps()
 	int timeLoops = reservoirOfTime / dt;
 	while (reservoirOfTime >= this->dt)
 	{
-		//integrate(state, t, dt);
+		//integrate(state, t, dt);  Integrate should take care of all the physics updates...
+		/*MovementPhysics::calcPhysics(p->position, p->velocity, p->acceleration, dt);*/
+		
 		std::cout << timeLoops << std::endl;
 		reservoirOfTime -= dt;
 		//t += dt;
