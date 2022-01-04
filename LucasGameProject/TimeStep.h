@@ -13,7 +13,7 @@ private:
 
 	double currentTime;
 	double reservoirOfTime;
-	std::vector<Updatable> updatables;
+	std::vector<Updatable *> updatables;
 	
 
 public:

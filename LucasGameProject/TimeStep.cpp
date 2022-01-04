@@ -23,9 +23,22 @@ void TimeStep::takeSteps(Player* p)
 	{
 		//integrate(state, t, dt);  Integrate should take care of all the physics updates...
 		/*MovementPhysics::calcPhysics(p->position, p->velocity, p->acceleration, dt);*/
-		
+		for (auto it = begin(this->updatables); it != end(this->updatables); ++it) {
+			it->update(dt); //UH OH HELP HERE
+			^PATCH THIS UP LATER SIR BRAVE SATHER!!!!
+		}
 		std::cout << timeLoops << std::endl;
 		reservoirOfTime -= dt;
 		//t += dt;
 	}
+}
+
+void TimeStep::addUpdatable(Updatable* updatable)
+{
+	this->updatables.push_back(updatable);
+}
+
+void TimeStep::addUpdatables(std::vector<Updatable*> updatables)
+{
+	this->updatables.insert(this->updatables.end(), updatables.begin(), updatables.end());
 }
