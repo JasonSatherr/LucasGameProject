@@ -29,6 +29,7 @@ Game::Game()
 	this->timeStepper = new TimeStep(&(this->clock));
 	this->timeStepper->addUpdatable(&this->player);
 	this->timeStepper->addUpdatable(&this->enemy);
+	this->timeStepper->addUpdatable(this->timeUI);
 }
 
 
@@ -65,7 +66,7 @@ void Game::update()
 	this->eventHandler.update(this->window);
 	//this->player.updateCharacter();
 	//this->enemy.updateCharacter();  BIG ISSUE, MOVE THESE INSIDE OF THE TIMESTEP!!
-	this->timeUI->update();
+	/*this->timeUI->update();*/
 	this->timeStepper->takeSteps();
 }
 

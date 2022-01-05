@@ -26,7 +26,7 @@ TimeElapsedComponent::~TimeElapsedComponent()
 {
 }
 
-void TimeElapsedComponent::update()
+void TimeElapsedComponent::update(double dt)
 {
 	/*
 	*	@returns void

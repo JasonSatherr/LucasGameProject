@@ -12,7 +12,7 @@ public:
 	
 	TimeElapsedComponent(sf::Font * font, sf::Clock* clock);
 	virtual ~TimeElapsedComponent();
-	void update();
+	void update(double dt);
 	void draw(sf::RenderWindow* window);
 };
 
