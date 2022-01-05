@@ -66,7 +66,7 @@ void Game::update()
 	//this->player.updateCharacter();
 	//this->enemy.updateCharacter();  BIG ISSUE, MOVE THESE INSIDE OF THE TIMESTEP!!
 	this->timeUI->update();
-	this->timeStepper->takeSteps(&player);
+	this->timeStepper->takeSteps();
 }
 
 void Game::render()

@@ -19,7 +19,7 @@ class Game
 private:
 	//PRIVATE VARIABLES
 	//sf variables
-	sf::RenderWindow *window;
+	sf::RenderWindow* window;
 	sf::Event event;
 	sf::VideoMode videoMode;
 	sf::Music music;
@@ -58,7 +58,7 @@ public:
 	//Game updating functions
 	void update();
 	void render();
-
+	
 	//Window status function
 	bool isWindowOpen();
 };
