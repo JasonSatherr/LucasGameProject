@@ -13,12 +13,24 @@ private:
 	sf::Event event;
 
 	//FUNCTIONS
+	/**
+	* 
+	* Initializes the variables of the EventHandler Class
+	*
+	* @return void	
+	*/
 	void initVariables();
 
 public:
 	EventHandler();
 	virtual ~EventHandler();
-
+	/**
+	*
+	* Updates the state of the game in relation to the windows events
+	*
+	* @param window A pointer to the window whose events are handled
+	* @return void
+	*/
 	void update(sf::Window * window);
 };
 

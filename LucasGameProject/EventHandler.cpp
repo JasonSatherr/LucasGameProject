@@ -3,11 +3,7 @@
 
 void EventHandler::initVariables()
 {
-	/*
-	*	@return void
-	* 
-	*	Initializes the variables of the EventHandler Class
-	*/
+
 }
 
 EventHandler::EventHandler()
