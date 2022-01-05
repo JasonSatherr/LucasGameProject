@@ -30,11 +30,6 @@ void Player::draw(sf::RenderWindow * window)
 
 void Player::update(double dt)
 {
-	/*This function will update all necessary parameters of the player object every time step
-		@returns  void
-		@param dt The size of the time step
-		*/
-
 	//NOTE, THE CODE HERE IS THE SAME FOR THE ENEMY CLASS, SO PERHAPS WE MOVE
 	//THIS FUNCTION UP ONE INHERITANCE LEVEL?!
 	updateVelocity();
