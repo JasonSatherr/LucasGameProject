@@ -64,9 +64,6 @@ void Game::update()
 	*/
 
 	this->eventHandler.update(this->window);
-	//this->player.updateCharacter();
-	//this->enemy.updateCharacter();  BIG ISSUE, MOVE THESE INSIDE OF THE TIMESTEP!!
-	/*this->timeUI->update();*/
 	this->timeStepper->takeSteps();
 }
 
@@ -83,9 +80,6 @@ void Game::render()
 	player.draw(window);
 	enemy.draw(window);
 	this->timeUI->draw(window);
-	// draw everything here...
-	// window.draw(...);
-	// end the current frame
 	this->window->display();
 }
 
