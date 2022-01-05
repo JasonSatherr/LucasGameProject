@@ -38,5 +38,10 @@ void TimeElapsedComponent::update(double dt)
 
 void TimeElapsedComponent::draw(sf::RenderWindow* window)
 {
+	/** 
+	*	Draws the time elapsed
+	* 
+	*	@param window The window to draw to.
+	*/
 	window->draw(this->text);
 }
