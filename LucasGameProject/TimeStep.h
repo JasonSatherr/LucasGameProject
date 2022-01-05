@@ -19,7 +19,7 @@ private:
 public:
 	TimeStep(sf::Clock* clock);
 	virtual ~TimeStep();
-	void takeSteps(Player *p);
+	void takeSteps();
 	void addUpdatable(Updatable* updatable);
 	void addUpdatables(std::vector<Updatable*> updatables);
 };

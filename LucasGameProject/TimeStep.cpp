@@ -11,7 +11,7 @@ TimeStep::TimeStep(sf::Clock* clock)
 	this->reservoirOfTime = 0.0;
 }
 
-void TimeStep::takeSteps(Player* p)
+void TimeStep::takeSteps()
 {
 	double newTime = this->clock->getElapsedTime().asSeconds();
 	double frameTime = newTime - currentTime;
