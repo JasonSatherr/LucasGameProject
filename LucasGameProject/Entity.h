@@ -1,4 +1,5 @@
 #pragma once
+#include "Collidable.h"
 /**
 * The entity abstract class will encompass many game objects
 * 
@@ -6,8 +7,8 @@
 * Anything that could argualy have a collision box should be considered
 * to be an entity
 */
-class Entity
+class Entity :public Collidable
 {
-
+private:
 };
 
