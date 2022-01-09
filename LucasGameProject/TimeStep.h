@@ -17,7 +17,8 @@ private:
 	double reservoirOfTime;
 	//list of objects to update every timestep
 	std::vector<Updatable *> updatables;
-	std::vector<Collidable*> collidables;
+	//list of objects to check for collisions every time step
+	std::vector<Collidable*> collidables; //Perhaps we need to feed this into another class to handle this
 	
 
 public:
@@ -59,23 +60,23 @@ public:
 	void addUpdatables(std::vector<Updatable*> updatables);
 
 	/**
-	* Adds updatable to the list of updatables
+	* Adds collidable to the list of collidables
 	*
-	* Adds updatable to the list of updatables to iterate over
+	* Adds collidable to the list of collidables to iterate over
 	*
-	* @param updatable pointer to the updatable which needs to be
-	*	added to the updatable list of the object
+	* @param collidable pointer to the collidable which needs to be
+	*	added to the collidable list of the object
 	*/
-	void addUpdatable(Updatable* updatable);
+	void addCollidable(Collidable* collidable);
 	/**
-	* Concats list of updatables to the list of updatables
+	* Concats list of collidables to the list of collidables
 	*
-	* Concats list of updatables to the list of updatables to iterate over
+	* Concats list of collidables to the list of collidables to iterate over
 	*
-	* @param vector of updatable pointers to add to
-	*	the updatable list of the object
+	* @param vector of collidable pointers to add to
+	*	the collidable list of the object
 	*/
-	void addUpdatables(std::vector<Updatable*> updatables);
+	void addCollidables(std::vector<Collidable*> collidables);
 
 };
 

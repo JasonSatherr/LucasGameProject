@@ -13,32 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\InitializeGame">
-      <UniqueIdentifier>{42334b46-c3a1-4bd0-8795-5405c2ade9b9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Physics">
       <UniqueIdentifier>{2c91e79f-744a-428f-a887-9abac7b44fa3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Updatable">
-      <UniqueIdentifier>{a0ee7625-4ed1-43a9-a0b8-6a335346f858}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Updatable">
-      <UniqueIdentifier>{bbc94204-8862-4057-8422-943ef3e6d346}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Updatable\Entities">
-      <UniqueIdentifier>{7184713a-f236-4bdc-a433-2752e85ab3dc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Updatable\UI">
-      <UniqueIdentifier>{52baaffd-c31f-4d7e-aa20-1f887987d139}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Updatable\UI\UIComponents">
-      <UniqueIdentifier>{d472e711-4b52-448c-b017-7e6623eae35d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Updatable\Entities">
-      <UniqueIdentifier>{758c1ba4-b9b8-4965-b882-364ec5cce299}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Updatable\UI">
-      <UniqueIdentifier>{81ce2738-d458-4b3b-adcf-a6fdd64feb04}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Events">
       <UniqueIdentifier>{1b35fb60-7389-4c68-8be3-374444344dbb}</UniqueIdentifier>
@@ -49,12 +25,42 @@
     <Filter Include="Header Files\Events">
       <UniqueIdentifier>{aed1c06b-b44b-4891-9006-759e88334c0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MainLoop">
+      <UniqueIdentifier>{29182fd4-ab61-4188-8795-d51b06866caf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLoop">
+      <UniqueIdentifier>{570c7306-b616-4698-937d-64b88334b3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{83fad11a-e8b4-4d12-b5a8-4d4cacd9735b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities\Updatable">
+      <UniqueIdentifier>{bbc94204-8862-4057-8422-943ef3e6d346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities\Updatable\UI">
+      <UniqueIdentifier>{81ce2738-d458-4b3b-adcf-a6fdd64feb04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{60647703-0316-4173-97cc-39ea203612d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Updatable">
+      <UniqueIdentifier>{a0ee7625-4ed1-43a9-a0b8-6a335346f858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Updatable\UI">
+      <UniqueIdentifier>{52baaffd-c31f-4d7e-aa20-1f887987d139}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Updatable\UI\UIComponents">
+      <UniqueIdentifier>{d472e711-4b52-448c-b017-7e6623eae35d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Updatable\Characters">
+      <UniqueIdentifier>{7184713a-f236-4bdc-a433-2752e85ab3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities\Updatable\Characters">
+      <UniqueIdentifier>{758c1ba4-b9b8-4965-b882-364ec5cce299}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LucasGameProject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
@@ -63,73 +69,67 @@
     <ClCompile Include="EventHandler.cpp">
       <Filter>Source Files\Events</Filter>
     </ClCompile>
-    <ClCompile Include="Initializer.cpp">
-      <Filter>Source Files\InitializeGame</Filter>
-    </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>Source Files\Updatable\Entities</Filter>
+      <Filter>Source Files\Entities\Updatable\Characters</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files\Updatable\Entities</Filter>
+      <Filter>Source Files\Entities\Updatable\Characters</Filter>
     </ClCompile>
     <ClCompile Include="HUD.cpp">
-      <Filter>Source Files\Updatable\UI</Filter>
+      <Filter>Source Files\Entities\Updatable\UI</Filter>
     </ClCompile>
     <ClCompile Include="TimeElapsedComponent.cpp">
-      <Filter>Source Files\Updatable\UI\UIComponents</Filter>
+      <Filter>Source Files\Entities\Updatable\UI\UIComponents</Filter>
     </ClCompile>
     <ClCompile Include="UIComponent.cpp">
-      <Filter>Source Files\Updatable\UI\UIComponents</Filter>
+      <Filter>Source Files\Entities\Updatable\UI\UIComponents</Filter>
     </ClCompile>
     <ClCompile Include="MovementPhysics.cpp">
       <Filter>Source Files\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="TimeStep.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files\Updatable\Entities</Filter>
+      <Filter>Source Files\Entities\Updatable\Characters</Filter>
     </ClCompile>
     <ClCompile Include="Updatable.cpp">
-      <Filter>Source Files\Updatable</Filter>
+      <Filter>Source Files\Entities\Updatable</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\GameLoop</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeStep.cpp">
+      <Filter>Source Files\GameLoop</Filter>
+    </ClCompile>
+    <ClCompile Include="Initializer.cpp">
+      <Filter>Source Files\GameLoop</Filter>
     </ClCompile>
     <ClCompile Include="Collidable.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Initializer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TimeStep.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>Header Files\Updatable\Entities</Filter>
+      <Filter>Header Files\Entities\Updatable\Characters</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>Header Files\Updatable\Entities</Filter>
+      <Filter>Header Files\Entities\Updatable\Characters</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files\Updatable\Entities</Filter>
+      <Filter>Header Files\Entities\Updatable\Characters</Filter>
     </ClInclude>
     <ClInclude Include="Updatable.h">
-      <Filter>Header Files\Updatable</Filter>
+      <Filter>Header Files\Entities\Updatable</Filter>
     </ClInclude>
     <ClInclude Include="TimeElapsedComponent.h">
-      <Filter>Header Files\Updatable\UI</Filter>
+      <Filter>Header Files\Entities\Updatable\UI</Filter>
     </ClInclude>
     <ClInclude Include="HUD.h">
-      <Filter>Header Files\Updatable\UI</Filter>
+      <Filter>Header Files\Entities\Updatable\UI</Filter>
     </ClInclude>
     <ClInclude Include="UIComponent.h">
-      <Filter>Header Files\Updatable\UI</Filter>
+      <Filter>Header Files\Entities\Updatable\UI</Filter>
     </ClInclude>
     <ClInclude Include="MovementPhysics.h">
       <Filter>Header Files\Physics</Filter>
@@ -137,11 +137,20 @@
     <ClInclude Include="EventHandler.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\MainLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="Initializer.h">
+      <Filter>Header Files\MainLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeStep.h">
+      <Filter>Header Files\MainLoop</Filter>
     </ClInclude>
     <ClInclude Include="Collidable.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Entities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -42,3 +42,13 @@ void TimeStep::addUpdatables(std::vector<Updatable*> updatables)
 {
 	this->updatables.insert(this->updatables.end(), updatables.begin(), updatables.end());
 }
+
+void TimeStep::addCollidable(Collidable* collidable)
+{
+	this->collidables.push_back(collidable);
+}
+
+void TimeStep::addCollidables(std::vector<Collidable*> collidables)
+{
+	this->collidables.insert(this->collidables.end(), collidables.begin(), collidables.end());
+}
