@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "MovementPhysics.h"
 #include "Updatable.h"
+#include "Collidable.h"
 /* Class to manage the time step
 */
 class TimeStep
@@ -16,6 +17,7 @@ private:
 	double reservoirOfTime;
 	//list of objects to update every timestep
 	std::vector<Updatable *> updatables;
+	std::vector<Collidable*> collidables;
 	
 
 public:
@@ -55,5 +57,25 @@ public:
 	*	the updatable list of the object
 	*/
 	void addUpdatables(std::vector<Updatable*> updatables);
+
+	/**
+	* Adds updatable to the list of updatables
+	*
+	* Adds updatable to the list of updatables to iterate over
+	*
+	* @param updatable pointer to the updatable which needs to be
+	*	added to the updatable list of the object
+	*/
+	void addUpdatable(Updatable* updatable);
+	/**
+	* Concats list of updatables to the list of updatables
+	*
+	* Concats list of updatables to the list of updatables to iterate over
+	*
+	* @param vector of updatable pointers to add to
+	*	the updatable list of the object
+	*/
+	void addUpdatables(std::vector<Updatable*> updatables);
+
 };
 
