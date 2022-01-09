@@ -27,7 +27,6 @@ void TimeStep::takeSteps()
 			(*it)->update(dt);
 			
 		}
-		std::cout << timeLoops << std::endl;
 		reservoirOfTime -= dt;
 		//t += dt;
 	}
